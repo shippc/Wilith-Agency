@@ -26,3 +26,13 @@ const linkAction = () =>{
    navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== MUDAR O ESTILO DO HEADER ===============*/
+const bgHeader = () =>{
+   const header = document.getElementById('header')
+   // Adicionar a classe .bg-header se o bottom do scroll da viewport é maior que 50
+   this.scrollY >= 50 ? header.classList.add('bg-header') 
+                      : header.classList.remove('bg-header')
+}
+window.addEventListener('scroll', bgHeader)
+bgHeader()

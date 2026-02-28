@@ -7,7 +7,7 @@
 
   /*========== CORES ==========*/
 
-  /*Mode de Cor HSL(hue, saturation, lightness)*/
+  /*Modo de Cor HSL(hue, saturation, lightness)*/
   --first-color: hsl(46, 65%, 52%);
   --second-color: hsl(0, 0%, 0%);
   --first-gradient: linear-gradient(90deg,
@@ -140,8 +140,9 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--black-color);
+  background-color: transparent;
   z-index: var(--z-fixed);
+  transition: background-color .4s;
 }
 
 .nav{
@@ -217,6 +218,18 @@ img {
 .show-menu{
   right: 0;
 }
+
+/* Mudar o Background do Header */
+.bg-header{
+  background-color: var(--body-color);
+  box-shadow: 0 4px 16px hsla(255, 90%, 8%, .1);
+}
+
+.bg-header .nav-logo span,
+.bg-header .nav-toggle{
+  color: var(--title-color);
+}
+
 /*=============== BOTÕES ===============*/
 .home{
   position: relative;
@@ -263,8 +276,8 @@ img {
   column-gap: 4.5rem;
 }
 
-.home-info-tittle{
-  color: var(--second-color);
+.home-info-title{
+  color: var(--first-color);
   font-size: var(--big-font-size);
   font-weight: var(--font-bold);
   margin-bottom: .5rem;
