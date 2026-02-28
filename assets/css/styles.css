@@ -230,7 +230,7 @@ img {
   color: var(--title-color);
 }
 
-/*=============== BOTÕES ===============*/
+/*=============== HOME ===============*/
 .home{
   position: relative;
   background-color: var(--black-color);
@@ -316,7 +316,58 @@ img {
   object-position: right;
 }
 
+/*=============== SOBRE NÓS ===============*/
+.about-container{
+  row-gap: 8rem;
+}
+
+.about-data{
+  text-align: center;
+}
+
+.about-description{
+  margin-bottom: 2rem;
+}
+
+.about-list{
+  text-align: initial;
+  grid-template-columns: repeat(2, 130px);
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-list-item{
+  display: flex;
+  column-gap: .5rem;
+  color: var(--title-color);
+}
+
+.about-list-item i{
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.about-images{
+  position: relative;
+  justify-self: center;
+}
+
+.about-img-1{
+  width: 200px;
+  border: 5px solid var(--body-color);
+  position: absolute;
+  top: -5rem;
+  left: 6rem;
+}
+
+.about-img-2{
+  width: 250px;
+  margin-right: 2.5rem;
+}
+
 /*=============== BOTÕES ===============*/
+
 .button{
   display: inline;
   background: var(--first-color);
