@@ -1,0 +1,234 @@
+/*=============== FONTE GOOGLE ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIÁVEIS CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== CORES ==========*/
+
+  /*Mode de Cor HSL(hue, saturation, lightness)*/
+  --first-color: hsl(46, 65%, 52%);
+  --second-color: hsl(0, 0%, 0%);
+  --first-gradient: linear-gradient(90deg,
+      hsl(46, 70%, 40%),
+      hsl(46, 80%, 60%));
+  --title-color: hsl(255, 12%, 12%);
+  --text-color: hsl(225, 12%, 24%);
+  --text-color-light: hsl(255, 4%, 70%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(0, 0%, 100%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(255, 20%, 10%);
+  --gray-border: hsl(255, 6%, 90%);
+  --black-border: hsl(255, 10%, 20%);
+
+  /*========== FONTES ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --big-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== PESO DAS FONTES ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== Z INDEX ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== RESPONSIVO FONTE ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== GERAL ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CLASSES DO CSS REUSAVEIS ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--second-color);
+  margin-bottom: .5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--black-color);
+  z-index: var(--z-fixed);
+}
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo{
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+}
+
+.nav-logo span{
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav-logo i{
+  color: var(--first-color);
+  font-size: 1.5rem;
+}
+
+.nav-toggle,
+.nav-close{
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: color .4s;
+}
+
+/* NAVEGAÇÃO PARA MOBILE */
+@media screen and (max-width: 1150px){
+  .nav-menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--black-color);
+    width: 80%;
+    height: 100%;
+    padding: 7.5rem 3.5rem 0;
+    border-left: 2px solid var(--black-border);
+  }
+
+  .nav-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  .nav-link{
+    color: var(--text-color-light);
+    font-weight: var(--font-semi-bold);
+    transition: color 4s;
+  }
+
+  .nav-link:hover{
+    color: var(--first-color);
+  }
+
+  .nav-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+}
+
+/* Aparecer o Menu */
+.show-menu{
+  right: 0;
+}
+
+/*=============== BOTÕES ===============*/
+.button{
+  display: inline;
+  background: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 2rem;
+  transition: box-shadow .4s;
+}
+
+.button:hover{
+  box-shadow: 0 8px 32px hsla(18, 95%, 55%, .3);
+  color: var(--white-color);
+}
