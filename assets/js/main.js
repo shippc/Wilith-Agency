@@ -36,3 +36,15 @@ const bgHeader = () =>{
 }
 window.addEventListener('scroll', bgHeader)
 bgHeader()
+
+/*=============== SERVIÇOS COM SWIPER ===============*/
+const swiperServices = new Swiper('.services-swiper', { 
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 24,
+  slidesPerView: 'auto',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
