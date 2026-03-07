@@ -424,6 +424,7 @@ img {
 }
 
 /*=============== PROJETOS ===============*/
+
 .projects{
   background-color: var(--black-color);
 }
@@ -461,6 +462,72 @@ img {
   font-weight: var(--font-medium);
   color: var(--title-color);
   margin-bottom: 1.5rem;
+}
+
+/*=============== CONTATO ===============*/
+.contact-container{
+  row-gap: 3rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.contact-img{
+  width: 320px;
+  justify-self: center;
+}
+
+.contact-data{
+  grid-template-columns: 230px;
+  justify-content: center;
+  row-gap: 1.5rem;
+}
+
+.contact-card{
+  background-color: var(--container-color);
+  border: 2px solid var(--gray-border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  transition: border-color .4s;
+}
+
+.contact-card:hover{
+  border-color: var(--first-color);
+}
+
+.contact-icon{
+  width: 48px;
+  height: 48px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  margin: 0 auto 1.25rem;
+}
+
+.contact-title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.contact-info{
+  font-size: normal;
+}
+
+.contact-social{
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.contact-social-link{
+  font-size: 1.5rem;
+  color: var(--first-color);
+  transition: transform 4.s;
+}
+
+.contact-social-link:hover{
+  transform: translateY(-.25rem);
 }
 
 /* Swiper class */
