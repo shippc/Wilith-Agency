@@ -48,3 +48,13 @@ const swiperServices = new Swiper('.services-swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+/*=============== MOSTRAR BOTÃO DE SUBIR PRA CIMA ===============*/ 
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+   // Acrescentar a classe .scroll-header no fundo do scroll da viewport quando for maior que 350
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						     : scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+scrollUp()
