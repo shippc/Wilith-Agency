@@ -423,6 +423,46 @@ img {
   left: 0;
 }
 
+/*=============== PROJETOS ===============*/
+.projects{
+  background-color: var(--black-color);
+}
+
+.projects .section-title{
+  color: var(--white-color);
+}
+
+.projects-container{
+  padding-block: 1.5rem 3rem;
+}
+
+.projects-card{
+  background-color: var(--container-color);
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: border-color 4.s;
+}
+
+.projects-card:hover{
+  border-color: var(--first-color);
+}
+
+.projects-data{
+  padding: 1.5rem 1rem 3rem;
+}
+
+.projects-title{
+  font-size: var(--h2-font-size);
+  margin-block: .5rem;
+}
+
+.projects-date{
+  display: block;
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
 /* Swiper class */
 
 .swiper{
