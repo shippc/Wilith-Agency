@@ -64,18 +64,32 @@ const sections = document.querySelectorAll('section[id]')
 
 
 const scrollActive = () => {
-   
+
    const scrollY = window.scrollY
 
    sections.forEach(section => {
-      const id = section.id, 
-            top = section.offsetTop - 50, 
-            height = section.offsetHeight, 
-            link = document.querySelector('.nav-menu a[href*=' + id + ']') 
+      const id = section.id,
+         top = section.offsetTop - 50,
+         height = section.offsetHeight,
+         link = document.querySelector('.nav-menu a[href*=' + id + ']')
 
-      if(!link) return
+      if (!link) return
 
       link.classList.toggle('active-link', scrollY > top && scrollY <= top + height)
    })
 }
 window.addEventListener('scroll', scrollActive)
+
+/*=============== REVELAR RECURSOS AO SCROLLAR ===============*/
+const sr = ScrollReveal({
+   origin: 'top',
+   distance: '100px',
+   duration: 2500,
+   delay: 400,
+})
+
+sr.reveal(`.home-content, .services-data, .services-swiper, .footer-container`)
+sr.reveal(`.home-images`, { origin: 'bottom', delay: 1000 })
+sr.reveal(`.about-images, .contact-img`, { origin: 'left' })
+sr.reveal(`.about-data, .contact-data`, { origin: 'right' })
+sr.reveal(`.projects-card`, { interval: 100 })
