@@ -230,6 +230,11 @@ img {
   color: var(--title-color);
 }
 
+/* Link Ativo */
+.active-link{
+  color: var(--first-color);
+}
+
 /*=============== HOME ===============*/
 .home {
   position: relative;
@@ -705,7 +710,7 @@ img {
 
 /*=============== BOTÃO DE SUBIR PRA CIMA ===============*/
 
-.scrollup{
+.scrollup {
   position: fixed;
   right: 1rem;
   bottom: -50%;
@@ -719,12 +724,12 @@ img {
   transition: bottom .4s, transform .4s;
 }
 
-.scrollup:hover{
+.scrollup:hover {
   transform: translateY(-.5rem);
 }
 
 /* Mostrar Botão de Subir */
 
-.show-scroll{
+.show-scroll {
   bottom: 3rem;
 }
