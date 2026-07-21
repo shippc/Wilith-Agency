@@ -256,6 +256,15 @@ img {
   color: var(--text-color-light);
 }
 
+.home-title-highlight {
+  color: var(--first-color);
+}
+
+.home-highlight {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
 .home-buttons {
   display: flex;
   justify-content: center;
@@ -904,12 +913,12 @@ img {
   }
 
   .home-img-1 {
-    width: 550px;
+    width: 650px;
     margin-left: 0;
   }
 
   .home-img-2 {
-    width: 350px;
+    width: 450px;
     border-width: 10px;
     left: -7rem;
     bottom: -8rem;
